@@ -1,4 +1,5 @@
 @import "settings";
+@import "utility";
 @import "foundation";
 
 // Or selectively include components
@@ -38,3 +39,28 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+
+// GENERAL
+main article a {border-bottom: 1px dashed;}
+.footer--top {background-color: $text-color; color: #FFF;padding: rem-calc(50) 0;}
+
+// ABOUT PAGE
+$blue: #38B2DF;
+.p-about {background-color: darken($blue, 10);font-family: "chaparral-pro";
+	a {color: #FFF;}
+	article p {font-size: rem-calc(24);}
+	aside {text-align: text-right;
+		img {max-width: rem-calc(180); @extend .horizontal-center; margin-bottom: rem-calc(100);}
+		h2 {font-size: rem-calc(16); font-family: "chaparral-pro"; text-transform: uppercase; font-weight: 700;}
+		ul {list-style-type: none; margin-left: 0; line-height: 1.2;
+			li {margin-bottom: 12px;}
+			span {color: $text-color;}
+		}
+		a {color: transparentize(#FFF, .2); 
+			&:hover {color: #FFF;}
+		}
+	}
+}
+.about--list {margin-bottom: rem-calc(25); border-bottom: 1px solid transparentize(#FFF, .7);}
+.hero img {max-width: rem-calc(250); margin-top: rem-calc(125); margin-bottom: rem-calc(125);}
